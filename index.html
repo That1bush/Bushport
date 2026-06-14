@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bush's Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+:root{
+    --orange:#ff8c00;
+    --orange2:#ffb347;
+    --dark:#0f0f0f;
+}
+
+body{
+    background:#0f0f0f;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Mouse Gradient */
+.mouse-glow{
+    position:fixed;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(255,140,0,.35) 0%, rgba(255,140,0,.1) 40%, transparent 70%);
+    pointer-events:none;
+    transform:translate(-50%,-50%);
+    z-index:0;
+    transition:transform .05s linear;
+}
+
+/* Animated Background */
+.bg{
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top left,#ff8c0015,transparent 30%),
+    radial-gradient(circle at bottom right,#ffb34715,transparent 30%);
+    z-index:-2;
+}
+
+.grid{
+    position:fixed;
+    inset:0;
+    background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+    background-size:40px 40px;
+    z-index:-1;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.hero{
+    text-align:center;
+    padding:100px 0;
+}
+
+.hero h1{
+    font-size:4rem;
+    background:linear-gradient(90deg,var(--orange),var(--orange2));
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    color:#ccc;
+    font-size:1.2rem;
+    margin-top:15px;
+}
+
+.badge{
+    display:inline-block;
+    background:rgba(255,140,0,.15);
+    border:1px solid rgba(255,140,0,.4);
+    color:#ffb347;
+    padding:10px 20px;
+    border-radius:999px;
+    margin-bottom:20px;
+}
+
+.section-title{
+    font-size:2rem;
+    margin-bottom:25px;
+    color:var(--orange);
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:rgba(255,255,255,.04);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:25px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:rgba(255,140,0,.5);
+    box-shadow:0 0 30px rgba(255,140,0,.15);
+}
+
+.card h3{
+    color:#ffb347;
+    margin-bottom:8px;
+}
+
+.card span{
+    color:#aaa;
+    font-size:.9rem;
+}
+
+.card p{
+    margin-top:12px;
+    color:#ddd;
+    line-height:1.6;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.skill{
+    background:rgba(255,140,0,.12);
+    border:1px solid rgba(255,140,0,.35);
+    padding:12px 18px;
+    border-radius:999px;
+}
+
+footer{
+    text-align:center;
+    padding:60px 20px;
+    color:#888;
+}
+
+.fade{
+    animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+<div class="grid"></div>
+<div class="mouse-glow" id="glow"></div>
+
+<div class="container">
+
+    <section class="hero fade">
+        <div class="badge">Portfolio • Bush</div>
+        <h1>tht1buxsh</h1>
+        <p>Founder • Executive • Community Manager • Roblox Developer • Project Manager • Public relations • Staffing Departments</p>
+    </section>
+
+    <section>
+        <h2 class="section-title">About Me</h2>
+        <div class="card">
+            <p>
+                Hi! I'm <strong>Bush</strong> (also known as <strong>tht1buxsh</strong>).
+                I have experience leading Roblox communities, managing teams,
+                overseeing development of many games, and creating projects from the ground up.
+                I've worked in executive leadership, community management,
+                project management, and development roles across multiple groups since 2022 although I joined the platform in 2018 on the account 'raphaelrulz'
+            </p>
+        </div>
+    </section>
+
+    <br><br>
+
+    <section>
+        <h2 class="section-title">Experience</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Alatry</h3>
+                <span>Founder & Chief Executive • Current</span>
+                <p>Leading company operations, development planning and strategic growth while assisting our clients.</p>
+            </div>
+
+            <div class="card">
+                <h3>RUN</h3>
+                <span>Co-Creator & Developer • Current</span>
+                <p>Assisting with game development, systems and project direction.</p>
+            </div>
+
+            <div class="card">
+                <h3>Twiln Group</h3>
+                <span>Community Manager • Current</span>
+                <p>Managing community engagement and communications.</p>
+            </div>
+
+            <div class="card">
+                <h3>Washiez</h3>
+                <span>Shift Supervisor • 1+ Year • Current</span>
+                <p>Supervising the car wash and assisting in trainings.</p>
+            </div>
+
+            <div class="card">
+                <h3>Aquatic Pools</h3>
+                <span>Pool Council • Current</span>
+                <p>Helping find people to promote.</p>
+            </div>
+
+            <div class="card">
+                <h3>Tamoura</h3>
+                <span>President • Former</span>
+                <p>Previously served as Project Manager and Community Manager before becoming President.</p>
+            </div>
+
+            <div class="card">
+                <h3>BurgerBlox</h3>
+                <span>Assistant Manager</span>
+                <p>Kept an eye on the place helping punish trollers.</p>
+            </div>
+
+            <div class="card">
+                <h3>Fleaq & Freebit</h3>
+                <span>Founder & Owner</span>
+                <p>Created and managed both projects.</p>
+            </div>
+
+            <div class="card">
+                <h3>Blitzk</h3>
+                <span>Founder</span>
+                <p>Established the project and managed operations, operations slowing to a hault.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <br><br>
+
+    <section>
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills">
+            <div class="skill">Leadership</div>
+            <div class="skill">Project Management</div>
+            <div class="skill">Community Management</div>
+            <div class="skill">Team Leadership</div>
+            <div class="skill">Roblox Development</div>
+            <div class="skill">Customer Service</div>
+            <div class="skill">Staff Management</div>
+            <div class="skill">Planning</div>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Bush Portfolio
+    </footer>
+
+</div>
+
+<script>
+const glow = document.getElementById("glow");
+
+document.addEventListener("mousemove", (e)=>{
+    glow.style.left = e.clientX + "px";
+    glow.style.top = e.clientY + "px";
+});
+</script>
+
+</body>
+</html>
